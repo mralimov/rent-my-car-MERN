@@ -11,7 +11,7 @@ flex
 flex-row
 items-center
 lg:pl-12
-lg: pr-12 
+lg:pr-12 
 justified-between
 `}
 `;
