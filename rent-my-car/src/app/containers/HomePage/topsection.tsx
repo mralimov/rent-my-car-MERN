@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import Mercedes from '../../../assets/images/mercedes-red.png'
 import BlobImg from '../../../assets/images/blob.svg'
 import { SCREENS } from "../../components/responsive/responsive";
-
+import { Button } from '../../components/button/button'
 const TopSectionContainer = styled.div`
 min-height: 400px;
 margin-top: 6em
@@ -126,6 +126,15 @@ img {
 }
 `;
 
+
+const ButtonsContainer = styled.div`
+${tw`
+flex
+flex-wrap
+mt-4
+`}
+`;
+
 const StandaloneCar = styled.div`
 width: auto;
 height: 10em;
@@ -147,6 +156,10 @@ export function TopSection() {
                 <Description>
                     Always choose the best car from our local stores or order it remotly at the best price for you and get the best quality cars for as long as you want!
                 </Description>
+                <ButtonsContainer>
+                <Button text="Book Your Ride"/>
+                <Button theme="filled" text="Sell Your Car"/>
+                </ButtonsContainer>
             </LeftContainer>
             <RightContainer>
                 <BlobContainer>
