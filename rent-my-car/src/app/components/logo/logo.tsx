@@ -34,6 +34,6 @@ return <LogoContainer>
     <Image>
         <img src={CarLogoImg} alt='logo img'/>
     </Image>
-    <LogoText>Your vehicle</LogoText>
+    <LogoText>Yourcar.</LogoText>
 </LogoContainer>
 }
