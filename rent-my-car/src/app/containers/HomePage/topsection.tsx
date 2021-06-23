@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import MclarenCarImg from '../../../assets/images/mclaren-orange-big.png'
+import Mercedes from '../../../assets/images/mercedes-red.png'
 import BlobImg from '../../../assets/images/blob.svg'
-
+import { SCREENS } from "../../components/responsive/responsive";
+import { Button } from '../../components/button/button'
 const TopSectionContainer = styled.div`
 min-height: 400px;
 margin-top: 6em
@@ -83,6 +84,55 @@ img {
     height: auto;
     max-height: max-content;
 }
+
+@media (min-width: ${SCREENS.sm}) {
+    width: 40em;
+    max-height: 10em;
+    right: -9em;
+    top: -16em;
+    transform: rotate(-25deg);
+}
+@media (min-width: ${SCREENS.lg}) {
+    width: 50em;
+    max-height: 30em;
+    right: -7em;
+    top: -15em;
+    transform: rotate(-25deg);
+}
+@media (min-width: ${SCREENS.xl}) {
+    width: 70em;
+    max-height: 10em;
+    right: -15em;
+    top: -25em;
+    transform: rotate(-20deg);
+}
+
+@media (min-width: ${SCREENS.sm}) {
+    width: 16em;
+    right: -6em;
+    top: -6em;
+}
+
+@media (min-width: ${SCREENS.lg}) {
+    width: 21em;
+    right: -8em;
+    top: -5em;
+}
+
+@media (min-width: ${SCREENS.xl}) {
+    width: 30em;
+    right: -13em;
+    top: -9em;
+}
+`;
+
+
+const ButtonsContainer = styled.div`
+${tw`
+flex
+flex-wrap
+mt-4
+`}
 `;
 
 const StandaloneCar = styled.div`
@@ -106,13 +156,17 @@ export function TopSection() {
                 <Description>
                     Always choose the best car from our local stores or order it remotly at the best price for you and get the best quality cars for as long as you want!
                 </Description>
+                <ButtonsContainer>
+                <Button text="Book Your Ride"/>
+                <Button theme="filled" text="Sell Your Car"/>
+                </ButtonsContainer>
             </LeftContainer>
             <RightContainer>
                 <BlobContainer>
                     <img src={BlobImg} alt=''/>
                 </BlobContainer>
                 <StandaloneCar>
-                    <img src={MclarenCarImg} alt=""/>
+                    <img src={Mercedes} alt=""/>
                 </StandaloneCar>
             </RightContainer>
         </TopSectionContainer>
